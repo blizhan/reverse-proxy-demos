@@ -1,0 +1,15 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    container_name: streamlit
+    privileged: True
+    expose:
+      - 8501
+    command: streamlit run app.py streamlit --server.port 8501 --server.address 0.0.0.0 --server.baseUrlPath="streamlit_service" --server.enableCORS=false --server.enableXsrfProtection=false
+    networks:
+     - servicesnet
+networks:
+  servicesnet:
+    external: true
+

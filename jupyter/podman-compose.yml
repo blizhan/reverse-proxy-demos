@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jupyter:
+    build: .
+    container_name: jupyter
+    privileged: True
+    user: root
+    expose:
+      - 8888
+    networks:
+     - servicesnet
+networks:
+  servicesnet:
+    external: true

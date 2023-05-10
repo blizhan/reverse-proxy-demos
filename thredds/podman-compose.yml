@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  thredds:
+    image: unidata/thredds-docker:5.4
+    container_name: thredds
+    expose:
+      - 8080
+      - 8443
+    privileged: true
+    command: /bin/bash -c "chmod +x /start.sh && /start.sh"
+    volumes:
+     - ./start.sh:/start.sh:Z
+    networks:
+     - servicesnet
+networks:
+  servicesnet:
+    external: true
