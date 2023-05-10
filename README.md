@@ -6,7 +6,7 @@ This repo show some demos of nginx-reverse-proxy usage to several popular http s
 
 - [x] 1. streamlit
 - [x] 2. jupyter
-- [ ] 3. fastapi
+- [x] 3. fastapi
 - [x] 4. thredds/tomcat
 - [ ] 5. mongodb
 
